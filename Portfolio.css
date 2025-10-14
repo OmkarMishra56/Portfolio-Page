@@ -1,0 +1,158 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+    color: #fff; 
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+    animation: fadeIn 1.5s ease-in; 
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes hoverGlow {
+    from { transform: scale(1); box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); }
+    to { transform: scale(1.05); box-shadow: 0 0 20px rgba(0, 123, 255, 1); }
+}
+
+
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    margin-bottom: 30px;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.hero-section h1 {
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 3em;
+    color: #00ffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 3px solid #00ffff;
+    margin: 20px auto;
+    transition: transform 0.3s ease; 
+}
+
+.hero-image:hover {
+    animation: hoverGlow 0.5s ease infinite alternate; 
+}
+
+.hero-description {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+
+.section {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    animation: fadeInUp 1s ease-out; 
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section h2 {
+    color: #00ffff;
+    font-size: 2em;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.section h3 {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.edu-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.edu-logo:hover {
+    transform: scale(1.1); 
+}
+
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li, ol li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    position: relative;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: '★'; 
+    color: #00ffff;
+    position: absolute;
+    left: 0;
+}
+
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .hero-image {
+        width: 100px;
+        height: 100px;
+    }
+    .section h2 {
+        font-size: 1.5em;
+    }
+}
+
+
