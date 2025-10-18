@@ -1,158 +1,249 @@
 body {
-    font-family: 'Roboto', sans-serif; 
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
-    color: #fff; 
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 900px;
-    animation: fadeIn 1.5s ease-in; 
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a0033, #3b0066, #ff0077, #00fff7);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  color: #fff;
+  margin: 0;
+  padding-top: 90px; 
+  scroll-behavior: smooth;
 }
 
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-@keyframes hoverGlow {
-    from { transform: scale(1); box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); }
-    to { transform: scale(1.05); box-shadow: 0 0 20px rgba(0, 123, 255, 1); }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  animation: fadeDown 0.8s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar h2 {
+  color: #00fff7;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ff0077;
+  text-shadow: 0 0 10px #ff0077;
 }
 
 
 .hero-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 10px;
-    margin-bottom: 30px;
-    animation: slideIn 1s ease-out;
-}
-
-@keyframes slideIn {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+  text-align: center;
+  padding: 70px 20px 40px;
+  animation: fadeIn 1.2s ease;
 }
 
 .hero-section h1 {
-    font-family: 'Orbitron', sans-serif; 
-    font-size: 3em;
-    color: #00ffff; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 3em;
+  font-family: 'Orbitron', sans-serif;
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #ff0077;
 }
 
 .hero-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; 
-    border: 3px solid #00ffff;
-    margin: 20px auto;
-    transition: transform 0.3s ease; 
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #ff0077;
+  margin: 25px auto;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .hero-image:hover {
-    animation: hoverGlow 0.5s ease infinite alternate; 
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #ff0077;
 }
 
 .hero-description {
-    font-size: 1.2em;
-    margin-top: 20px;
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #eaeaea;
+  line-height: 1.6;
 }
-
 
 .section {
-    background: rgba(255, 255, 255, 0.1); 
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    animation: fadeInUp 1s ease-out; 
+  background: rgba(255, 255, 255, 0.08);
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 85%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.section.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .section h2 {
-    color: #00ffff;
-    font-size: 2em;
-    text-decoration: underline;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #00fff7;
+  font-size: 2em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff0077;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .section h3 {
-    color: #fff;
-    font-size: 1.5em;
+  color: #fff;
 }
 
 .edu-logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
-    transition: transform 0.3s ease;
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 5px;
+  transition: transform 0.3s;
 }
 
 .edu-logo:hover {
-    transform: scale(1.1); 
+  transform: scale(1.15);
 }
 
-
 ul, ol {
-    list-style-type: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ul li, ol li {
-    margin: 10px 0;
-    font-size: 1.1em;
-    position: relative;
-    padding-left: 20px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  padding-left: 15px;
 }
 
 ul li::before {
-    content: '★'; 
-    color: #00ffff;
-    position: absolute;
-    left: 0;
+  content: '▹';
+  color: #ff0077;
+  margin-right: 10px;
 }
 
-
-a {
-    color: #00ffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+ .floating-buttons {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
 }
 
-a:hover {
-    
-    text-shadow: 0 0 5px #ff00ff;
+.floating-buttons button {
+  background: linear-gradient(90deg, #00fff7, #ff0077);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.floating-buttons button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #ff0077, #00fff7);
+  color: #fff;
+}
+
+.top-button {
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  display: none;
+  background: linear-gradient(45deg, #ff0077, #00fff7);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #000;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.top-button:hover {
+  transform: rotate(360deg);
+  background: linear-gradient(45deg, #00fff7, #ff0077);
+  color: #fff;
 }
 
 
 footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #ccc;
+  text-align: center;
+  padding: 30px;
+  color: #bbb;
+  font-size: 0.95em;
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    h1 {
-        font-size: 2.5em;
-    }
-    .hero-image {
-        width: 100px;
-        height: 100px;
-    }
-    .section h2 {
-        font-size: 1.5em;
-    }
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2em;
+  }
+
+  .section {
+    width: 90%;
+    padding: 20px;
+  }
 }
 
 
+@keyframes fadeDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
