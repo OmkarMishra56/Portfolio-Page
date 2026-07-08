@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omkar Mishra — B.Tech &amp; Data Science Portfolio</title>
+<meta name="description" content="Omkar Mishra — B.Tech (OUTR) &amp; BS Data Science and Applications (IIT Madras). Portfolio, skills, and projects.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ambient animated background -->
+<div class="ambient" aria-hidden="true">
+  <div class="ambient__grid"></div>
+  <div class="ambient__orb ambient__orb--gold"></div>
+  <div class="ambient__orb ambient__orb--teal"></div>
+  <div class="ambient__orb ambient__orb--violet"></div>
+  <div class="ambient__stars"></div>
+</div>
+
+<!-- Scroll progress wheel -->
+<svg class="progress-wheel" viewBox="0 0 60 60" aria-hidden="true">
+  <circle class="progress-wheel__track" cx="30" cy="30" r="26"></circle>
+  <circle class="progress-wheel__fill" cx="30" cy="30" r="26"></circle>
+  <g class="progress-wheel__spokes">
+    <line x1="30" y1="10" x2="30" y2="50"></line>
+    <line x1="10" y1="30" x2="50" y2="30"></line>
+    <line x1="16" y1="16" x2="44" y2="44"></line>
+    <line x1="44" y1="16" x2="16" y2="44"></line>
+  </g>
+</svg>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader__wheel"></div>
+  <p class="loader__label">Booting portfolio<span class="dots">...</span></p>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__brand">
+    <span class="nav__mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17"/><line x1="20" y1="5" x2="20" y2="35"/><line x1="5" y1="20" x2="35" y2="20"/><line x1="9.9" y1="9.9" x2="30.1" y2="30.1"/><line x1="30.1" y1="9.9" x2="9.9" y2="30.1"/></svg>
+    </span>
+    Omkar Mishra
+  </a>
+
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#about" data-nav>About</a>
+    <a href="#education" data-nav>Education</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#projects" data-nav>Projects</a>
+    <a href="#hobbies" data-nav>Hobbies</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+
+  <div class="nav__actions">
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" data-nav>About</a>
+  <a href="#education" data-nav>Education</a>
+  <a href="#skills" data-nav>Skills</a>
+  <a href="#projects" data-nav>Projects</a>
+  <a href="#hobbies" data-nav>Hobbies</a>
+  <a href="#contact" data-nav>Contact</a>
+</div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__wheel-bg" aria-hidden="true">
+      <svg viewBox="0 0 600 600">
+        <circle cx="300" cy="300" r="240"/>
+        <circle cx="300" cy="300" r="180"/>
+        <g class="hero__spokes">
+          <line x1="300" y1="60" x2="300" y2="540"/>
+          <line x1="60" y1="300" x2="540" y2="300"/>
+          <line x1="130" y1="130" x2="470" y2="470"/>
+          <line x1="470" y1="130" x2="130" y2="470"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero__inner">
+      <p class="eyebrow reveal">Developer</p>
+
+      <h1 class="hero__title reveal">
+        <span class="hero__title-line">Omkar</span>
+        <span class="hero__title-line hero__title-line--accent">Mishra</span>
+      </h1>
+
+      <p class="hero__role reveal">
+        <span id="typedRole"></span><span class="cursor" aria-hidden="true">|</span>
+      </p>
+
+      <p class="hero__desc reveal">
+        Dual-degree student building at the intersection of software and data —
+        pursuing a <strong>B.Tech</strong> at OUTR and a <strong>BS in Data Science &amp; Applications</strong>
+        at IIT Madras. Comfortable across HTML/CSS/JS, Python, and applied ML,
+        with a growing focus on cloud-backed, production-minded projects.
+      </p>
+
+      <div class="hero__cta reveal">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="https://drive.google.com/file/d/1Qv5A9lWy4L7KEXIZxQ4NCdmIYO-eyEp4/view?usp=sharing" class="btn btn--ghost" download>Download Resume</a>
+        <a href="#contact" class="btn btn--text">Contact Me →</a>
+      </div>
+
+      <div class="hero__social reveal" aria-label="Social links">
+        <a href="https://github.com/OmkarMishra56" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.29 9.28 7.86 10.78.57.1.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.12-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.65 1.58.24 2.76.12 3.05.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.08.78 2.18v3.23c0 .3.2.66.8.55 4.56-1.51 7.85-5.76 7.85-10.78C23.02 5.24 18.27.5 12 .5Z"/></svg>
+        <a href="https://www.linkedin.com/in/omkarmishra/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM.5 8.98h4.96V23.5H.5V8.98Zm7.53 0h4.75v1.98h.07c.66-1.2 2.27-2.47 4.67-2.47 5 0 5.92 3.15 5.92 7.24V23.5h-4.96v-6.75c0-1.6-.03-3.67-2.3-3.67-2.3 0-2.66 1.72-2.66 3.55v6.87H8.03V8.98Z"/></svg>
+        </a>
+        <a href="mailto:omishra776@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.3 7.8 6.1 7.8-6.1H4.2Zm15.8 1.6-7.53 5.9a1 1 0 0 1-1.24 0L3.7 7.4v11.1c0 .3.24.5.5.5h15a.5.5 0 0 0 .5-.5V7.4Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__badges" aria-hidden="true">
+      <span style="--i:0">Python</span>
+      <span style="--i:1">React</span>
+      <span style="--i:2">JavaScript</span>
+      <span style="--i:3">ML</span>
+      <span style="--i:4">Cloud</span>
+      <span style="--i:5">HTML/CSS</span>
+      
+    </div>
+
+    <a class="scroll-cue" href="#about" aria-label="Scroll to content">
+      <span></span> Scroll
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <p class="section__eyebrow reveal">01 — Who I am</p>
+    <h2 class="section__title reveal">About Me</h2>
+
+    <div class="about__grid">
+      <p class="about__bio reveal">
+        I'm a first-year dual-degree student carrying two programmes at once: a
+        <strong>B.Tech</strong> at the Odisha University of Technology and Research, and a
+        <strong>BS in Data Science and Applications</strong> from IIT Madras. That combination is
+        deliberate — one gives me a grounding in core software engineering, the other pushes me
+        deeper into statistics, ML, and data-driven thinking. Outside of coursework I build small
+        web projects to practice turning ideas into working interfaces, and I'm slowly moving from
+        "I can build a page" to "I can build a product."
+      </p>
+
+      <div class="about__stats">
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-count="2">0</span>
+          <span class="stat-card__label">Degrees in progress<br>simultaneously</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-count="7">0</span>
+          <span class="stat-card__label">Core technologies<br>in active use</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-count="2028">0</span>
+          <span class="stat-card__label">Expected graduation<br>year</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <p class="section__eyebrow reveal">02 — Academic path</p>
+    <h2 class="section__title reveal">Education</h2>
+
+    <ol class="timeline">
+      <li class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card">
+          <div class="timeline__head">
+            <img src="assets/outr-logo.png" alt="OUTR logo" class="timeline__logo">
+            <div>
+              <h3>Odisha University of Technology and Research</h3>
+              <span class="timeline__meta">Bachelor of Technology (B.Tech) · Sep 2024 – Jun 2028</span>
+            </div>
+          </div>
+          <p>Core software engineering foundation — programming, systems, and engineering
+            fundamentals, run in parallel with the IIT Madras programme below.</p>
+        </div>
+      </li>
+
+      <li class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card">
+          <div class="timeline__head">
+            <img src="assets/iit-madras-logo.png" alt="IIT Madras logo" class="timeline__logo">
+            <div>
+              <h3>Indian Institute of Technology, Madras</h3>
+              <span class="timeline__meta">BS in Data Science &amp; Applications · May 2024 – May 2028</span>
+            </div>
+          </div>
+          <p>Statistics, machine learning, and applied data science — the analytical half of
+            the dual-degree path, focused on turning data into decisions.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <p class="section__eyebrow reveal">03 — Toolkit</p>
+    <h2 class="section__title reveal">Skills</h2>
+
+    <div class="skills__grid">
+      <div class="skill-card reveal">
+        <h3>AI / ML &amp; Data</h3>
+        <ul class="skill-bars">
+          <li><span>Python</span><div class="bar"><div class="bar__fill" style="--pct:80%"></div></div></li>
+          <li><span>AI / ML Fundamentals</span><div class="bar"><div class="bar__fill" style="--pct:65%"></div></div></li>
+          <li><span>Pytorch</span><div class="bar"><div class="bar__fill" style="--pct:65%"></div></div></li>
+          <li><span>Tensorflow</span><div class="bar"><div class="bar__fill" style="--pct:75%"></div></div></li>
+          <li><span>Numpy</span><div class="bar"><div class="bar__fill" style="--pct:70%"></div></div></li>
+          <li><span>Pandas</span><div class="bar"><div class="bar__fill" style="--pct:85%"></div></div></li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3>Frontend</h3>
+        <ul class="skill-bars">
+          <li><span>HTML</span><div class="bar"><div class="bar__fill" style="--pct:85%"></div></div></li>
+          <li><span>CSS</span><div class="bar"><div class="bar__fill" style="--pct:80%"></div></div></li>
+          <li><span>JavaScript</span><div class="bar"><div class="bar__fill" style="--pct:75%"></div></div></li>
+          <li><span>React JS</span><div class="bar"><div class="bar__fill" style="--pct:60%"></div></div></li>
+          <li><span>TypeScript</span><div class="bar"><div class="bar__fill" style="--pct:85%"></div></div></li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3>Backend</h3>
+        <ul class="skill-bars">
+      <li><span>DataBase</span><div class="bar"><div class="bar__fill" style="--pct:85%"></div></div></li>
+      <li><span>Mysql</span><div class="bar"><div class="bar__fill" style="--pct:85%"></div></div></li>
+      <li><span>Postgresql</span><div class="bar"><div class="bar__fill" style="--pct:85%"></div></div></li>
+      <li><span>HTML</span><div class="bar"><div class="bar__fill" style="--pct:85%"></div></div></li>
+      </ul>
+      </div>
+      
+      <div class="skill-card reveal">
+        <h3>Cloud &amp; Tools</h3>
+        <ul class="skill-bars">
+          <li><span>Cloud Technologies</span><div class="bar"><div class="bar__fill" style="--pct:55%"></div></div></li>
+          <li><span>Git</span><div class="bar"><div class="bar__fill" style="--pct:65%"></div></div></li>
+          <li><span>AWS</span><div class="bar"><div class="bar__fill" style="--pct:65%"></div></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <p class="section__eyebrow reveal">04 — Selected work</p>
+    <h2 class="section__title reveal">Projects</h2>
+    <p class="section__note reveal">
+      Placeholder cards below — swap in your real projects (title, description, stack,
+      links, image) in <code>index.html</code>. Structure is ready to go.
+    </p>
+
+    <div class="filters reveal" role="tablist" aria-label="Project filters">
+      <button class="filter is-active" data-filter="all">All</button>
+      <button class="filter" data-filter="frontend">Frontend</button>
+      <button class="filter" data-filter="ai">AI / ML</button>
+      <button class="filter" data-filter="fullstack">Full Stack</button>
+    </div>
+
+    <div class="projects__grid" id="projectsGrid">
+      <article class="project-card reveal" data-cat="frontend">
+        <div class="project-card__media" aria-hidden="true">
+          <span>Add<br>screenshot</span>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags"><span>AI/ML</span><span>Completed</span></div>
+              <h3>Developed a modular task management application using React and TypeScript, achieving a 35% reduction in code duplication through
+                       a scalable, component-based architecture.
+                       
+                  Integrated the Google Gemini API to generate context-aware task summaries and structured breakdowns, reducing manual planning effort
+                       by 40%.
+                       
+                  Implemented secure session management and protected routing, ensuring 100% authenticated access control and consistent application
+                       behavior.
+                       
+                  Designed real-time productivity metrics and optimized UI performance, enhancing dashboard responsiveness by 30% for a smoother user
+                       experience.<h3>
+          <div class="project-card__stack">
+            <span>React 19</span><span>Tailwind CSS</span><span>React Router 7</span><span>TypeScript</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/OmkarMishra56/PrismaFlow" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-cat="ai">
+        <div class="project-card__media" aria-hidden="true">
+          <span>Add<br>screenshot</span>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags"><span>AI / ML</span><span>Concept</span></div>
+          <h3>Project Title Two</h3>
+          <p>One or two sentences on what this project does and the problem it solves.</p>
+          <div class="project-card__stack">
+            <span>Python</span><span>Pandas</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-cat="fullstack">
+        <div class="project-card__media" aria-hidden="true">
+          <span>Add<br>screenshot</span>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags"><span>Full Stack</span><span>Planned</span></div>
+          <h3>Project Title Three</h3>
+          <p>One or two sentences on what this project does and the problem it solves.</p>
+          <div class="project-card__stack">
+            <span>React</span><span>Node.js</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section class="section" id="hobbies">
+    <p class="section__eyebrow reveal">05 — Off duty</p>
+    <h2 class="section__title reveal">Hobbies</h2>
+
+    <div class="hobbies__grid">
+      <div class="hobby-card reveal">
+        <div class="hobby-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 11a6 6 0 0 0 12 0"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+        </div>
+        <h3>Singing</h3>
+        <p>Music as a reset button between problem sets.</p>
+      </div>
+      <div class="hobby-card reveal">
+        <div class="hobby-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="20" x2="16" y2="4"/><circle cx="18" cy="3" r="1.6"/><line x1="3" y1="21" x2="7" y2="17"/></svg>
+        </div>
+        <h3>Playing Cricket</h3>
+        <p>Weekend matches keep the competitive streak alive.</p>
+      </div>
+      <div class="hobby-card reveal">
+        <div class="hobby-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/></svg>
+        </div>
+        <h3>Coding</h3>
+        <p>Also the day job — small side projects, most weeks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--contact" id="contact">
+    <p class="section__eyebrow reveal">06 — Get in touch</p>
+    <h2 class="section__title reveal">Contact Me</h2>
+
+    <div class="contact__grid">
+      <div class="contact__info reveal">
+        <p>Open to internships, collaborations, and interesting conversations about
+          data, ML, or web development. Fastest way to reach me is email.</p>
+        <ul class="contact__list">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.3 7.8 6.1 7.8-6.1H4.2Z"/></svg>
+            <a href="mailto:omishra776@gmail.com">omishra776@gmail.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM.5 8.98h4.96V23.5H.5V8.98Zm7.53 0h4.75v1.98h.07c.66-1.2 2.27-2.47 4.67-2.47 5 0 5.92 3.15 5.92 7.24V23.5h-4.96v-6.75c0-1.6-.03-3.67-2.3-3.67-2.3 0-2.66 1.72-2.66 3.55v6.87H8.03V8.98Z"/></svg>
+            <a href="https://www.linkedin.com/in/omkarmishra" target="_blank" rel="noopener">linkedin.com/in/omkarmishra</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.29 9.28 7.86 10.78.57.1.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.12-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.65 1.58.24 2.76.12 3.05.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.08.78 2.18v3.23c0 .3.2.66.8.55 4.56-1.51 7.85-5.76 7.85-10.78C23.02 5.24 18.27.5 12 .5Z"/></svg>
+            <a href="https://github.com/OmkarMishra56" target="_blank" rel="noopener">github.com/OmkarMishra56</a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <input type="text" id="cName" name="name" required placeholder=" ">
+          <label for="cName">Your name</label>
+          <span class="field__error">Please enter your name.</span>
+        </div>
+        <div class="field">
+          <input type="email" id="cEmail" name="email" required placeholder=" ">
+          <label for="cEmail">Your email</label>
+          <span class="field__error">Please enter a valid email.</span>
+        </div>
+        <div class="field">
+          <textarea id="cMsg" name="message" rows="4" required placeholder=" "></textarea>
+          <label for="cMsg">Message</label>
+          <span class="field__error">Please add a short message.</span>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+        <p class="form__success" id="formSuccess" role="status">Thanks — your message is ready to send. This opens your email client.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__brand">Omkar Mishra</div>
+  <nav class="footer__links" aria-label="Footer">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <p class="footer__built">Built with HTML, CSS &amp; JavaScript.</p>
+  <p class="footer__copy">© <span id="year"></span> Omkar Mishra. All rights reserved.</p>
+</footer>
+
+<button id="topBtn" class="top-button" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
